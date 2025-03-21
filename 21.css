@@ -1,0 +1,210 @@
+/* Estilos generales */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    background: linear-gradient(rgb(176, 200, 245), rgb(180, 198, 233), rgb(176, 200, 245));
+    background-repeat: repeat;
+}
+
+.title {
+    text-align: center;
+}
+
+/* Contenedor de la flor */
+.flower {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botón central */
+.btn2 {
+    position: absolute;
+    background-color: rgb(187, 189, 106);
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    margin: 10px;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+    font-size: 50px;
+    color: rgb(125, 182, 60);
+    font-family: cursive;
+}
+
+.btn2:hover {
+    color: white;
+    box-shadow: 0px 100px 100px rgb(255, 255, 255);
+}
+
+/* Pétalos */
+.btn {
+    position: absolute;
+    background-color: rgb(253, 255, 124);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: cursive;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 60px rgb(253, 255, 124);
+    rotate: 1deg;
+}
+
+/* Posiciona los pétalos alrededor del centro */
+.btn:nth-child(1) { transform: translate(-180px, -180px); }
+.btn:nth-child(2) { transform: translate(0, -250px); }
+.btn:nth-child(3) { transform: translate(180px, -180px); }
+.btn:nth-child(4) { transform: translate(-250px, 0); }
+.btn:nth-child(5) { transform: translate(250px, 0); }
+.btn:nth-child(6) { transform: translate(-180px, 180px); }
+.btn:nth-child(7) { transform: translate(0, 250px); }
+.btn:nth-child(8) { transform: translate(180px, 180px); }
+
+/* Tooltip (Texto emergente) */
+.tooltipO {
+    position: absolute;
+    bottom: 70px;
+    right: -150%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    font-size: 10px;
+}
+
+.tooltipM {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    font-size: 10px;
+}
+
+.tooltipA {
+    position: absolute;
+    bottom: 70px;
+    right: -50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    font-size: 10px;
+}
+
+.tooltipE {
+    position: absolute;
+    bottom: 40%;
+    left: 195%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    font-size: 10px;
+}
+
+.tooltipT {
+    position: absolute;
+    bottom: 40%;
+    right: 0%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    font-size: 10px;
+    
+}
+
+.btn:hover .tooltipM {
+    opacity: 1;
+    box-shadow: 0px 5px 15px rgb(0, 0, 0);
+}
+
+
+.btn:hover .tooltipO {
+    opacity: 1;
+    box-shadow: 0px 5px 15px rgb(0, 0, 0);
+}
+
+
+.btn:hover .tooltipA {
+    opacity: 1;
+    box-shadow: 0px 5px 15px rgb(0, 0, 0);
+}
+
+.btn:hover .tooltipE {
+    opacity: 1;
+    box-shadow: 0px 5px 15px rgb(0, 0, 0);
+}
+
+.btn:hover .tooltipT {
+    opacity: 1;
+    box-shadow: 0px 5px 15px rgb(0, 0, 0);
+}
+
+.tallo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 3000px;
+    background: linear-gradient(rgb(33, 99, 27), rgb(9, 53, 9));
+    bottom: -2850px;
+    z-index: -1;
+}
